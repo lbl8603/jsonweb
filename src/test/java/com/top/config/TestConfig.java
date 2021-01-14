@@ -1,5 +1,6 @@
 package com.top.config;
 
+import com.top.annotation.ioc.Bean;
 import com.top.annotation.ioc.Configuration;
 import com.top.annotation.ioc.Value;
 import lombok.Data;
@@ -13,14 +14,19 @@ import lombok.Data;
 public class TestConfig {
     @Value("key")
     private String key;
-    @Value("dddd:1")
+    @Value("integer:1")
     private int integer;
-    @Value("array:1,2")
-    private String[] array;
-    @Value("intayy:1,2")
-    private Integer[] intayy;
-    @Value("dd:1,2")
-    private int[] dd;
+    @Value("strings:1,2")
+    private String[] strings;
+    @Value("integers:1,2")
+    private Integer[] integers;
+    @Value("ints:1,2")
+    private int[] ints;
     @Value("def:true")
     private Boolean def;
+
+    @Bean
+    public String testBean(){
+        return "testBean";
+    }
 }
