@@ -1,0 +1,6 @@
+web:
+  profiles:
+    active: local
+  port: 8080
+key: 123
+val: 123
